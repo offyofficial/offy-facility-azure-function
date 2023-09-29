@@ -1,0 +1,19 @@
+{
+  "bindings": [
+    {
+      "schedule": "0/15 * * * * *",
+      "name": "timer",
+      "runsOnStartup": true,
+      "type": "timerTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "surveyQueue",
+      "type": "serviceBus",
+      "queueName": "surveys",
+      "connection": "FacilityServiceBusConnection",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
